@@ -1,0 +1,6 @@
+tamagotchi CHEAT fedora 1000
+food steak 100
+food apple 100
+food watermelon 100
+hat fedora 100
+hat cap 100

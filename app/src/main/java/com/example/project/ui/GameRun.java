@@ -1,8 +1,10 @@
 package com.example.project.ui;
 
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project.exceptions.ItemNameException;
 import com.example.project.exceptions.NegativeAmountException;
@@ -15,11 +17,10 @@ import com.example.project.model.items.Food;
 import com.example.project.model.items.Hat;
 import com.example.project.network.Weather;
 
-
 import java.io.IOException;
 import java.util.Scanner;
 
-public class GameRun implements Parcelable {
+public class GameRun {
     private Tamagotchi tamagotchi;
     private Inventory inventory = new Inventory();
     private Scanner input = new Scanner(System.in);
@@ -32,6 +33,7 @@ public class GameRun implements Parcelable {
     }
 
     // EFFECTS: calls createTamagotchi if input is "create", load if input is "load", or repeat loop if otherwise
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void intro() throws IOException {
         while (true) {
             System.out.println("Enter: new or load");
@@ -59,11 +61,10 @@ public class GameRun implements Parcelable {
     }
 
     // EFFECTS: prints fields of tamagotchi and inventory
-    public void statusMessage() {
+    private void statusMessage() {
         System.out.println(tamagotchi.getName() + " is wearing a " + tamagotchi.getHat().getName());
         System.out.println("Happy Meter: " + tamagotchi.getHappyMeter());
         System.out.println("Today's weather is " + tamagotchi.getColour());
-        inventory.printInventory();
         System.out.println("\n");
     }
 
@@ -100,6 +101,7 @@ public class GameRun implements Parcelable {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void main() throws IOException {
         intro();
         while (true) {
@@ -128,16 +130,6 @@ public class GameRun implements Parcelable {
 
     public Inventory getInventory() {
         return inventory;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        
     }
 }
 

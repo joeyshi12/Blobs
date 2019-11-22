@@ -1,0 +1,6 @@
+tamagotchi test fedora 10
+food steak 10
+food apple 10
+food watermelon 10
+hat fedora 10
+hat cap 10

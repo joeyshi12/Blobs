@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".ui.MainActivity">
 
     <ImageView
         android:id="@+id/image"
@@ -13,6 +13,76 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.358" />
+
+    <Button
+        android:id="@+id/status"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="clickStatus"
+        android:text="status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/feed"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="clickFeed"
+        android:text="feed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inventory"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/inventory"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="clickInventory"
+        android:text="inventory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/hat"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="clickHat"
+        android:text="hat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/status"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/blobName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name Display"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

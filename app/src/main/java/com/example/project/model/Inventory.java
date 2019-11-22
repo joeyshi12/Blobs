@@ -1,5 +1,7 @@
 package com.example.project.model;
 
+import android.view.View;
+
 import com.example.project.exceptions.ItemNameException;
 import com.example.project.exceptions.NegativeAmountException;
 import com.example.project.model.items.Food;
@@ -45,11 +47,13 @@ public class Inventory {
     }
 
     // EFFECTS: prints all items in inventory
-    public void printInventory() {
+    public String inventoryReport() {
+        StringBuilder Report = new StringBuilder();
         for (Map.Entry<String, Item> entry : inventory.entrySet()) {
             Item item = entry.getValue();
-            System.out.println(item.getName() + ": " + item.getAmount());
+            Report.append(item.getName()).append(": ").append(item.getAmount() + "\n");
         }
+        return Report.toString();
     }
 
 

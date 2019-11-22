@@ -1,15 +1,14 @@
-package com.example.project;
+package com.example.project.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 
-import com.example.project.ui.GameRun;
+import com.example.project.R;
 
-public class MainActivity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +19,22 @@ public class MainActivity extends AppCompatActivity {
     public void newGame (View view) {
 
         // Create an Intent to start the second activity
-        Intent secondIntent = new Intent(this, SecondActivity.class);
-        GameRun gameRun = new GameRun();
-        secondIntent.putExtra("newGame", gameRun);
+        Intent intent = new Intent(this, MainActivity.class);
+
+        intent.putExtra("game", "new");
 
         // Start the new activity.
-        startActivity(secondIntent);
+        startActivity(intent);
     }
 
     public void loadGame (View view) {
 
         // Create an Intent to start the second activity
-        Intent secondIntent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
+
+        intent.putExtra("game", "load");
 
         // Start the new activity.
-        startActivity(secondIntent);
+        startActivity(intent);
     }
 }
