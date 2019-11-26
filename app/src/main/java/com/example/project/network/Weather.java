@@ -2,6 +2,10 @@ package com.example.project.network;
 
 
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import com.example.project.model.Observer;
 
 import java.io.BufferedReader;
@@ -12,13 +16,15 @@ import java.net.URL;
 
 public class Weather extends Subject {
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void notifyObserver() throws IOException {
         for (Observer observer : observerList) {
             observer.update(getInfo());
         }
     }
 
-    private String getInfo() throws MalformedURLException, IOException {
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private String getInfo() throws IOException {
         BufferedReader br = null;
         try {
             String theURL = getURL();

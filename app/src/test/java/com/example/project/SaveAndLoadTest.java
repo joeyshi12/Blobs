@@ -25,9 +25,9 @@ public class SaveAndLoadTest {
     private Inventory testInventory;
     private SaveAndLoad testSaveAndLoad;
     private String testFilePath =
-            "C:\\Users\\j\\Desktop\\Applications\\Project\\data\\testFile.txt";
+            "C:\\Users\\j\\Desktop\\Applications\\Blobs\\data\\testFile.txt";
     private String testFileCopyPath =
-            "C:\\Users\\j\\Desktop\\Applications\\Project\\data\\testFileCopy.txt";
+            "C:\\Users\\j\\Desktop\\Applications\\Blobs\\data\\testFileCopy.txt";
 
     @Before
     public void setUp() {

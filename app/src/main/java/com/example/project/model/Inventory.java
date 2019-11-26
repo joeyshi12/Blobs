@@ -19,6 +19,8 @@ public class Inventory {
         inventory = new HashMap<>();
     }
 
+    // MODIFIES: this
+    // EFFECTS: puts all default items in inventory map
     public void setDefault() {
         defaultItemNames.add("steak");
         defaultItemNames.add("apple");
@@ -81,14 +83,17 @@ public class Inventory {
         return numberOf(itemName) > 0;
     }
 
+    // EFFECTS: returns true if inventory is empty; else, returns false
     public Boolean isEmpty() {
         return inventory.isEmpty();
     }
 
+    // EFFECTS: returns defaultItemNames list
     List<String> getDefaultItemNames() {
         return defaultItemNames;
     }
 
+    // EFFECTS: puts a new item type in inventory map
     public void addItemType(String itemName, Item item) {
         inventory.put(itemName, item);
     }

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Project</string>
+    <string name="three">Three</string>
+    <string name="apply">apply</string>
+    <string name="name_of_blob">Name of Blob</string>
+    <string name="your_selection">Your selection:</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="textview">TextView</string>
+    <string name="name_display">Name Display</string>
+    <string name="save">save</string>
+    <string name="inventory">inventory</string>
+    <string name="hat">hat</string>
+    <string name="status">status</string>
+    <string name="feed">feed</string>
+    <string name="load">load</string>
+    <string name="blobs">Blobs</string>
 </resources>

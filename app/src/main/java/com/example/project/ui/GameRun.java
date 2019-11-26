@@ -64,7 +64,6 @@ public class GameRun {
     private void statusMessage() {
         System.out.println(tamagotchi.getName() + " is wearing a " + tamagotchi.getHat().getName());
         System.out.println("Happy Meter: " + tamagotchi.getHappyMeter());
-        System.out.println("Today's weather is " + tamagotchi.getColour());
         System.out.println("\n");
     }
 

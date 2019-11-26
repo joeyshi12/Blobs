@@ -10,7 +10,6 @@ public class Tamagotchi implements Observer {
     private String name = "blank";
     private Hat hat = new Hat("cap", 1);
     private int happyMeter = 10;
-    private String colour;
 
     /** private constructor to prevent others from instantiating this class */
     private Tamagotchi() { }
@@ -49,13 +48,10 @@ public class Tamagotchi implements Observer {
     public void update(String weather) {
         if (weather.equals("clear")) {
             System.out.println("today's a clear day");
-            colour = "yellow";
         } else if (weather.equals("clouds")) {
             System.out.println("today's cloudy");
-            colour = "gray";
         } else {
             System.out.println("today is rainy");
-            colour = "blue";
         }
     }
 
@@ -74,9 +70,6 @@ public class Tamagotchi implements Observer {
         return happyMeter;
     }
 
-    public String getColour() {
-        return colour;
-    }
 
 
     // SETTERS

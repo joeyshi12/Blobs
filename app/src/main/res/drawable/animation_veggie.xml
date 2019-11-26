@@ -2,19 +2,19 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@drawable/sprite_b0"
+        android:drawable="@drawable/veggie_0"
         android:duration="75"/>
 
     <item
-        android:drawable="@drawable/sprite_b1"
+        android:drawable="@drawable/veggie_2"
         android:duration="75"/>
 
     <item
-        android:drawable="@drawable/sprite_b2"
+        android:drawable="@drawable/veggie_3"
         android:duration="75"/>
+
 
     <item
-        android:drawable="@drawable/sprite_b3"
+        android:drawable="@drawable/veggie_4"
         android:duration="75"/>
-
 </animation-list>

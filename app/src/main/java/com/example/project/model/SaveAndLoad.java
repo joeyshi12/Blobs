@@ -50,7 +50,8 @@ public class SaveAndLoad implements Saveable, Loadable {
     // EFFECTS: overwrites every field value in gameRun to the value in the path text file
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void load(String path) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get(path));
+        List<String> lines = null;
+        lines = Files.readAllLines(Paths.get(path));
         for (String line : lines) {
             ArrayList<String> partsOfLine = splitOnSpace(line);
             overwrite(partsOfLine);
