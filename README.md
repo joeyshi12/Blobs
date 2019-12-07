@@ -1,6 +1,4 @@
 # pet-blob
-An interactive digital pet app.
+An interactive digital pet app made on android studio.
 
-<body>
-<h1> hello </h1>
-</body>
+
